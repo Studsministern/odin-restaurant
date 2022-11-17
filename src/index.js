@@ -1,2 +1,4 @@
 import './styles.css';
-import init_page from './pages/index/init-page';
+import { initPage } from './pages/index/initPage';
+
+initPage();
