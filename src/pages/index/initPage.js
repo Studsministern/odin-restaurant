@@ -2,12 +2,12 @@ const createTab = (text, tabs) => {
     const tab = document.createElement('button');
     tabs.append(tab);
     
-    tab.classList.add([
+    tab.classList.add(
         'tab', 
         'hover-up', 
         'hover-line', 
         'semi-transparent'
-    ]);
+    );
     tab.innerText = text;
 
     return tab;
