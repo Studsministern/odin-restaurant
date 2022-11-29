@@ -35,17 +35,20 @@ body {
 
 
 
-/* Header*/
+/* Header */
 
 header {
     grid-area: header;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: var(--fs-huge);
     background: var(--bg-color-secondary);
     padding: var(--dist-medium) 0;
     gap: var(--dist-medium);
+}
+
+header h1 {
+    font-size: var(--fs-huge);
 }
 
 header .tabs {
@@ -91,8 +94,15 @@ footer div {
 
 
 
-/* General */
+/* Elements */
+h1 {
+    font-size: calc(var(--fs-medium) * 1.2);
+}
+
+h2 {
+    font-size: calc(var(--fs-medium) * 1.1);
+}
 
 p {
-    color: red;
+    font-size: var(--fs-medium);
 }
