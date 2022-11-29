@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
+
 :root {
     --bg-color-main: white;
     --bg-color-secondary: rgb(245, 245, 245);
@@ -26,6 +28,7 @@
 body {
     min-height: 100vh;
     font-size: 16px;
+    font-family: 'EB Garamond', serif;
     display: grid;
     grid: "header header  header" min-content
           ".      content ."      auto
@@ -45,6 +48,7 @@ header {
     background: var(--bg-color-secondary);
     padding: var(--dist-medium) 0;
     gap: var(--dist-medium);
+    font-weight: 500;
 }
 
 header h1 {
@@ -72,6 +76,31 @@ header .tabs button {
 
 #content {
     grid-area: content;
+    padding: var(--dist-medium);
+}
+
+#content .page {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#content .home {
+
+}
+
+#content .menu .menu-header,
+#content .about .about-header {
+    font-weight: 500;
+}
+
+#content .menu ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+#content .menu ol li {
+    
 }
 
 
@@ -92,15 +121,23 @@ footer div {
     gap: calc(var(--fs-medium) * 0.2);
 }
 
+footer h2 {
+    font-size: var(--fs-medium);
+}
+
 
 
 /* Elements */
 h1 {
-    font-size: calc(var(--fs-medium) * 1.2);
+    font-size: var(--fs-huge);
 }
 
 h2 {
-    font-size: calc(var(--fs-medium) * 1.1);
+    font-size: var(--fs-large);
+}
+
+li {
+    font-size: var(--fs-large);
 }
 
 p {
