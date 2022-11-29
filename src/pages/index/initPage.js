@@ -59,4 +59,6 @@ export function initPage() {
     let tabs = header();
     const content = document.querySelector('#content');
     footer();
+
+    return tabs;
 }
