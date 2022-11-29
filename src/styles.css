@@ -1,4 +1,16 @@
 :root {
+    --bg-color-main: white;
+    --bg-color-secondary: rgb(245, 245, 245);
+
+    --font-color-main: black;
+
+    --fs-huge: 2.6rem;
+    --fs-large: 1.5rem;
+    --fs-medium: 1.1rem;
+    --fs-small: .8rem;
+    --fs-tiny: .6rem;
+
+    --dist-medium: 1rem;
 }
 
 * {
@@ -13,20 +25,73 @@
 
 body {
     min-height: 100vh;
-    font-size: 16px;    
+    font-size: 16px;
+    display: grid;
+    grid: "header header  header" min-content
+          ".      content ."      auto
+          "footer footer  footer" 10vh
+          / auto  60%     auto;
 }
+
+
+
+/* Header*/
 
 header {
-    font-size: 4rem;
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--fs-huge);
+    background: var(--bg-color-secondary);
+    padding: var(--dist-medium) 0;
+    gap: var(--dist-medium);
 }
+
+header .tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--dist-medium);
+}
+
+header .tabs button {
+    width: minmax(25vw, 200px);
+    border: none;
+    font-size: var(--fs-large);
+    padding: calc(var(--fs-large) * 0.3) calc(var(--fs-large) * 0.6);
+    background: inherit;
+    cursor: pointer;
+}
+
+
+
+/* Content */
 
 #content {
-
+    grid-area: content;
 }
+
+
+
+/* Footer */
 
 footer {
-
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color-secondary);
+    font-size: var(--fs-medium);
 }
+
+footer div {
+    display: flex;
+    gap: calc(var(--fs-medium) * 0.2);
+}
+
+
+
+/* General */
 
 p {
     color: red;
