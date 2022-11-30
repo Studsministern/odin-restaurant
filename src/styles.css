@@ -89,6 +89,7 @@ header .tabs button {
 
 }
 
+#content .home .home-header,
 #content .menu .menu-header,
 #content .about .about-header {
     font-weight: 500;
@@ -97,10 +98,6 @@ header .tabs button {
 #content .menu ol {
     margin-left: 2rem;
     margin-bottom: 1rem;
-}
-
-#content .menu ol li {
-    
 }
 
 

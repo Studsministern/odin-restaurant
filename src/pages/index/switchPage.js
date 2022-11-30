@@ -1,8 +1,19 @@
 const _homePage = (parent) => {
-    menu.classList.add(
+    const home = document.createElement('div');
+    parent.append(home);
+    home.classList.add(
         'page',
         'home'
     );
+
+    // Welcome text
+    const homeHeader = document.createElement('h2');
+    const homeText = document.createElement('h2');
+    home.append(homeHeader);
+    home.append(homeText);
+    homeHeader.innerText = 'Welcome!';
+    homeText.innerText = 'This is a fake restaurant page for a fake restaurant. The location is also fake. And the food. But you should try the real food, in real life it is good.';
+    homeHeader.classList.add('home-header');
 }
 
 const _menuItem = (
@@ -100,7 +111,7 @@ const _aboutPage = (parent) => {
     about.append(aboutHeader);
     about.append(aboutText);
     aboutHeader.innerText = 'About us:';
-    aboutText.innerText = 'This is a fake restaurant page made only by me. You can find my GitHub link at the bottom of this page! :)';
+    aboutText.innerText = 'This is a fake restaurant page made by me. You can find my GitHub link at the bottom of this page! :)';
     aboutHeader.classList.add('about-header');
 }
 
@@ -119,4 +130,9 @@ export function switchPage(tab) {
             _aboutPage(content);
             break;
     }
+}
+
+export function initSwitchPage() {
+    const content = document.querySelector('#content');
+    _homePage(content);
 }
