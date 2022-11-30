@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --bg-color-main: white;
-    --bg-color-secondary: #f2f2f2;
+    --bg-color-main: rgb(248, 248, 248);
+    --bg-color-secondary: #f4f4f4;
     --bg-color-red: #ce2b37;
     --bg-color-green: #009246;
 
@@ -126,6 +126,33 @@ footer div {
 
 footer h2 {
     font-size: var(--fs-medium);
+}
+
+
+
+/* Shadows */
+
+.side-shadows {
+    position: relative;
+}
+
+.side-shadows:before,
+.side-shadows:after {
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 1rem;
+}
+
+.side-shadows:before {
+    box-shadow: -1rem 0 1rem -1rem inset var(--bg-color-main);
+    left: -1rem;
+}
+
+.side-shadows:after {
+    box-shadow: 1rem 0 1rem -1rem inset var(--bg-color-main);
+    right: -1rem;
 }
 
 

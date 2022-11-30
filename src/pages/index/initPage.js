@@ -58,6 +58,7 @@ const footer = () => {
 export function initPage() {
     let tabs = header();
     const content = document.querySelector('#content');
+    content.classList.add('side-shadows');
     footer();
 
     return tabs;
