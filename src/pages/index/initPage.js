@@ -19,7 +19,7 @@ const header = () => {
     // Restaurant text
     const headerText = document.createElement('h1');
     header.append(headerText);
-    headerText.innerText = 'Restaurant';
+    headerText.innerText = 'Restaurant page';
 
     // Tab div
     const tabDiv = document.createElement('div');
