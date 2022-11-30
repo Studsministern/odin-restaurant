@@ -80,7 +80,7 @@ header .tabs button {
 
 #content {
     grid-area: content;
-    padding: var(--dist-medium);
+    padding: calc(var(--dist-medium) * 3) calc(var(--dist-medium) * 4);
     background: var(--bg-color-main);
 }
 
@@ -98,11 +98,12 @@ header .tabs button {
 #content .menu .menu-header,
 #content .about .about-header {
     font-weight: 500;
+    align-self: center;
 }
 
 #content .menu ol {
     margin-left: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 

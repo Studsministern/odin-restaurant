@@ -82,7 +82,7 @@ const _menuPage = (parent) => {
     // Dessert header
     const dessertHeader = document.createElement('h2');
     menu.append(dessertHeader);
-    dessertHeader.innerText = 'Main courses:';
+    dessertHeader.innerText = 'Desserts:';
     dessertHeader.classList.add('menu-header');
     
     // Main courses menu
