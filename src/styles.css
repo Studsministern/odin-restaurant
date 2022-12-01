@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --bg-color-main: rgb(248, 248, 248);
-    --bg-color-secondary: #f4f4f4;
-    --bg-color-red: #ce2b37;
-    --bg-color-green: #009246;
+    --color-main: rgb(230, 230, 230);
+    
+    --bg-color-main: #3e3e3eae;
+    --bg-color-red: #ce2b37d0;
+    --bg-color-green: #009246d0;
 
     --font-color-main: black;
 
@@ -34,9 +35,10 @@ body {
     display: grid;
     grid: "header header  header" min-content
           ".      content ."      auto
-          "footer footer  footer" 10vh
+          "footer footer  footer" min-content
           / auto  60%     auto;
-    background: var(--bg-color-secondary);
+    background: url('img/nik-owens-40OJLYVWeeM-unsplash.jpg') no-repeat center;
+    background-size: auto 100%;
 }
 
 
@@ -51,7 +53,7 @@ header {
     padding: var(--dist-medium) 0;
     gap: var(--dist-medium);
     font-weight: 800;
-    color: var(--bg-color-secondary);
+    color: var(--color-main);
     background: var(--bg-color-green);
 }
 
@@ -82,6 +84,7 @@ header .tabs button {
     grid-area: content;
     padding: calc(var(--dist-medium) * 3) calc(var(--dist-medium) * 4);
     background: var(--bg-color-main);
+    color: var(--color-main);
 }
 
 #content .page {
@@ -113,10 +116,12 @@ header .tabs button {
 footer {
     grid-area: footer;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: calc(var(--fs-medium) * 0.6);
     font-size: var(--fs-medium);
-    color: var(--bg-color-secondary);
+    color: var(--color-main);
     background: var(--bg-color-red);
 }
 

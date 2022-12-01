@@ -5,8 +5,7 @@ const createTab = (text, tabs) => {
     tab.classList.add(
         'tab', 
         'hover-up', 
-        'hover-line', 
-        'semi-transparent'
+        'hover-line'
     );
     tab.innerText = text;
 
@@ -39,26 +38,51 @@ const header = () => {
 const footer = () => {
     const footer = document.querySelector('footer');
 
-    // Credit text
-    const creditText = document.createElement('div');
-    footer.append(creditText);
+    // Credit div
+    const creditDiv = document.createElement('div');
+    footer.append(creditDiv);
     
     // Author text
     const authorText = document.createElement('h2');
-    creditText.append(authorText);
+    creditDiv.append(authorText);
     authorText.innerText = 'Created by ';
 
     // GitHub Link
     const gitHubLink = document.createElement('a');
-    creditText.append(gitHubLink);
+    creditDiv.append(gitHubLink);
     gitHubLink.href = 'https://github.com/Studsministern';
     gitHubLink.innerText = 'Eric Weidow';
+
+    // Image div
+    const imageDiv = document.createElement('div');
+    footer.append(imageDiv);
+
+    // Image reference text
+    const imageText = document.createElement('h2');
+    imageDiv.append(imageText);
+    imageText.innerText = 'Photo by'
+    
+    // Photograph link
+    const photographLink = document.createElement('a');
+    imageDiv.append(photographLink);
+    photographLink.href = 'https://unsplash.com/@nik_owens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText';
+    photographLink.innerText = 'Nik Owens';
+
+    imageDiv.append(document.createElement('h2').innerText = 'on');
+
+    // Image link
+    const imageLink = document.createElement('a');
+    imageDiv.append(imageLink);
+    imageLink.href = 'https://unsplash.com/s/photos/Neapolitan-pizza?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText';
+    imageLink.innerText = 'Unsplash';
 }
 
 export function initPage() {
     let tabs = header();
     const content = document.querySelector('#content');
-    content.classList.add('side-shadows');
+    content.classList.add( 
+        'side-shadows'
+    );
     footer();
 
     return tabs;
