@@ -37,8 +37,11 @@ body {
           ".      content ."      auto
           "footer footer  footer" min-content
           / auto  60%     auto;
-    background: url('img/nik-owens-40OJLYVWeeM-unsplash.jpg') no-repeat center;
-    background-size: auto 100%;
+    background: url('img/nik-owens-40OJLYVWeeM-unsplash.jpg');
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
