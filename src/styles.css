@@ -16,6 +16,7 @@
     --fs-tiny: .6rem;
 
     --dist-medium: 1rem;
+    --dist-button: calc(var(--fs-large) * 0.3);
 }
 
 * {
@@ -74,9 +75,39 @@ header .tabs button {
     width: minmax(25vw, 200px);
     border: none;
     font-size: var(--fs-large);
-    padding: calc(var(--fs-large) * 0.3) calc(var(--fs-large) * 0.6);
+    padding: var(--dist-button) calc(var(--dist-button) * 2);
     background: inherit;
     cursor: pointer;
+}
+
+
+
+/* Tab hover effects */
+header .tabs button {
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+
+header .tabs button:hover {
+    transform: translateY(calc(-0.4 * var(--dist-button)));
+}
+
+header .tabs button::after { /* Line effect */
+    position: absolute;
+    content: "";
+    width: calc(100% - 4 * var(--dist-button));
+    height: 2px;
+    bottom: var(--dist-button);
+    left: calc(2 * var(--dist-button));
+    background: var(--color-main);
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  header .tabs button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 
